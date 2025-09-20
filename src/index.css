@@ -8,47 +8,50 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Dark theme base colors */
-    --background: 240 10% 3.9%;
-    --foreground: 0 0% 98%;
+    /* BOVANN GROUP Brand Colors - Based on official identity */
+    --background: 0 0% 8%;
+    --foreground: 0 0% 95%;
 
-    --card: 240 10% 3.9%;
-    --card-foreground: 0 0% 98%;
+    --card: 0 0% 12%;
+    --card-foreground: 0 0% 95%;
 
-    --popover: 240 10% 3.9%;
-    --popover-foreground: 0 0% 98%;
+    --popover: 0 0% 12%;
+    --popover-foreground: 0 0% 95%;
 
-    /* BOVANN RED brand color */
-    --primary: 0 84% 56%;
-    --primary-foreground: 0 0% 98%;
+    /* BOVANN RED - Exact brand color */
+    --primary: 0 100% 50%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 240 3.7% 15.9%;
-    --secondary-foreground: 0 0% 98%;
+    --secondary: 0 0% 18%;
+    --secondary-foreground: 0 0% 95%;
 
-    --muted: 240 3.7% 15.9%;
-    --muted-foreground: 240 5% 64.9%;
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 65%;
 
-    --accent: 240 3.7% 15.9%;
-    --accent-foreground: 0 0% 98%;
+    --accent: 0 100% 50%;
+    --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 62.8% 30.6%;
+    --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 240 3.7% 15.9%;
-    --input: 240 3.7% 15.9%;
-    --ring: 0 84% 56%;
+    --border: 0 0% 20%;
+    --input: 0 0% 15%;
+    --ring: 0 100% 50%;
 
-    /* Purple gradients for tech aesthetic */
-    --gradient-primary: linear-gradient(135deg, hsl(265 89% 55%) 0%, hsl(320 85% 60%) 100%);
-    --gradient-secondary: linear-gradient(135deg, hsl(240 10% 3.9%) 0%, hsl(265 20% 15%) 100%);
-    --gradient-accent: linear-gradient(135deg, hsl(0 84% 56%) 0%, hsl(320 85% 60%) 100%);
+    /* BOVANN Brand Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(0 100% 50%) 0%, hsl(15 100% 60%) 100%);
+    --gradient-secondary: linear-gradient(135deg, hsl(0 0% 8%) 0%, hsl(0 0% 18%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(0 100% 50%) 0%, hsl(350 100% 55%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(0 0% 5%) 0%, hsl(0 20% 15%) 50%, hsl(0 0% 8%) 100%);
     
-    /* Glow effects */
-    --glow-primary: 0 0 40px hsl(0 84% 56% / 0.3);
-    --glow-purple: 0 0 60px hsl(265 89% 55% / 0.4);
+    /* Enhanced Glow Effects */
+    --glow-primary: 0 0 60px hsl(0 100% 50% / 0.4);
+    --glow-secondary: 0 0 40px hsl(0 100% 50% / 0.2);
+    --glow-intense: 0 0 80px hsl(0 100% 50% / 0.6);
     
-    /* Smooth transitions */
-    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    /* Professional Transitions */
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-quick: all 0.2s ease-out;
 
     --radius: 0.5rem;
 
@@ -70,26 +73,26 @@ All colors MUST be HSL.
   }
 
   .dark {
-    /* Same as root - we use dark theme by default */
-    --background: 240 10% 3.9%;
-    --foreground: 0 0% 98%;
-    --card: 240 10% 3.9%;
-    --card-foreground: 0 0% 98%;
-    --popover: 240 10% 3.9%;
-    --popover-foreground: 0 0% 98%;
-    --primary: 0 84% 56%;
-    --primary-foreground: 0 0% 98%;
-    --secondary: 240 3.7% 15.9%;
-    --secondary-foreground: 0 0% 98%;
-    --muted: 240 3.7% 15.9%;
-    --muted-foreground: 240 5% 64.9%;
-    --accent: 240 3.7% 15.9%;
-    --accent-foreground: 0 0% 98%;
-    --destructive: 0 62.8% 30.6%;
+    /* Same as root - BOVANN GROUP dark theme */
+    --background: 0 0% 8%;
+    --foreground: 0 0% 95%;
+    --card: 0 0% 12%;
+    --card-foreground: 0 0% 95%;
+    --popover: 0 0% 12%;
+    --popover-foreground: 0 0% 95%;
+    --primary: 0 100% 50%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 0 0% 18%;
+    --secondary-foreground: 0 0% 95%;
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 65%;
+    --accent: 0 100% 50%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
-    --border: 240 3.7% 15.9%;
-    --input: 240 3.7% 15.9%;
-    --ring: 0 84% 56%;
+    --border: 0 0% 20%;
+    --input: 0 0% 15%;
+    --ring: 0 100% 50%;
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -108,33 +111,126 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
-    background: var(--gradient-secondary);
+    background: var(--gradient-hero);
     min-height: 100vh;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
   }
 }
 
 @layer components {
+  /* BOVANN Brand Text Gradient */
   .gradient-text {
-    @apply bg-gradient-to-r from-primary to-purple-500 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-primary via-red-400 to-primary bg-clip-text text-transparent;
+    animation: shimmer 2s ease-in-out infinite alternate;
   }
   
+  @keyframes shimmer {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+  }
+  
+  /* Enhanced Hero Button */
   .hero-button {
-    @apply relative overflow-hidden rounded-lg px-8 py-4 font-semibold text-white transition-all duration-300;
+    @apply relative overflow-hidden rounded-xl px-8 py-4 font-bold text-white transition-all;
     background: var(--gradient-primary);
-    box-shadow: var(--glow-primary);
+    box-shadow: var(--glow-primary), 0 10px 30px -10px hsl(0 100% 50% / 0.3);
+    transition: var(--transition-smooth);
+    border: 1px solid hsl(0 100% 50% / 0.3);
   }
   
   .hero-button:hover {
-    transform: translateY(-2px);
-    box-shadow: var(--glow-purple);
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: var(--glow-intense), 0 20px 40px -15px hsl(0 100% 50% / 0.4);
+    border-color: hsl(0 100% 50% / 0.6);
+  }
+
+  .hero-button:active {
+    transform: translateY(-1px) scale(1.01);
   }
   
+  /* Enhanced Card Design */
   .card-glow {
-    @apply backdrop-blur-sm border border-border/50 rounded-xl;
-    background: linear-gradient(135deg, hsl(240 3.7% 15.9% / 0.8) 0%, hsl(265 20% 15% / 0.6) 100%);
+    @apply backdrop-blur-xl border rounded-2xl relative overflow-hidden;
+    background: linear-gradient(135deg, 
+      hsl(0 0% 12% / 0.95) 0%, 
+      hsl(0 0% 15% / 0.9) 50%, 
+      hsl(0 0% 12% / 0.95) 100%
+    );
+    border: 1px solid hsl(0 0% 25% / 0.5);
+    box-shadow: 
+      0 8px 32px -8px hsl(0 0% 0% / 0.3),
+      inset 0 1px 0 hsl(0 0% 100% / 0.1);
+    transition: var(--transition-smooth);
+  }
+
+  .card-glow:hover {
+    border-color: hsl(0 100% 50% / 0.3);
+    box-shadow: 
+      0 20px 40px -10px hsl(0 0% 0% / 0.4),
+      0 0 20px hsl(0 100% 50% / 0.1),
+      inset 0 1px 0 hsl(0 0% 100% / 0.15);
+  }
+
+  .card-glow::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, 
+      transparent, 
+      hsl(0 100% 50% / 0.1), 
+      transparent
+    );
+    transition: left 0.6s ease;
+  }
+
+  .card-glow:hover::before {
+    left: 100%;
   }
   
+  /* Professional Section Titles */
   .section-title {
-    @apply text-4xl font-bold mb-8;
+    @apply text-4xl md:text-5xl font-bold mb-12 text-center;
+    text-shadow: 0 2px 4px hsl(0 0% 0% / 0.3);
+  }
+
+  /* Enhanced Outline Button */
+  .btn-outline-enhanced {
+    @apply border-2 border-primary/30 bg-transparent text-foreground hover:bg-primary hover:text-primary-foreground;
+    transition: var(--transition-smooth);
+    backdrop-filter: blur(10px);
+  }
+
+  .btn-outline-enhanced:hover {
+    box-shadow: var(--glow-secondary);
+    border-color: hsl(0 100% 50% / 0.8);
+  }
+
+  /* Navigation Enhancement */
+  .nav-link {
+    @apply relative text-foreground/80 hover:text-foreground;
+    transition: var(--transition-quick);
+  }
+
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--gradient-primary);
+    transition: width 0.3s ease;
+  }
+
+  .nav-link:hover::after {
+    width: 100%;
   }
 }

@@ -83,7 +83,7 @@ const Prestations = () => {
                     ))}
                   </ul>
 
-                  <Button variant="outline" className="w-full mt-6 group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
+                  <Button variant="outline" className="w-full mt-6 btn-outline-enhanced group-hover:bg-primary group-hover:text-primary-foreground">
                     Découvrir le service
                   </Button>
                 </CardContent>

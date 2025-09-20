@@ -89,7 +89,7 @@ const Formations = () => {
                         <CardDescription className="text-muted-foreground mb-4">
                           {formation.description}
                         </CardDescription>
-                        <Button variant="outline" size="sm" className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
+                        <Button variant="outline" size="sm" className="w-full btn-outline-enhanced group-hover:bg-primary group-hover:text-primary-foreground">
                           En savoir plus
                         </Button>
                       </CardContent>

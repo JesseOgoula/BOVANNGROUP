@@ -65,13 +65,13 @@ const Contact = () => {
               </CardHeader>
               <CardContent>
                 <div className="flex space-x-4">
-                  <Button variant="outline" size="icon" className="hover:bg-blue-600 hover:text-white transition-colors">
+                  <Button variant="outline" size="icon" className="btn-outline-enhanced hover:bg-blue-600 hover:border-blue-600">
                     <Facebook className="h-5 w-5" />
                   </Button>
-                  <Button variant="outline" size="icon" className="hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500 hover:text-white transition-colors">
+                  <Button variant="outline" size="icon" className="btn-outline-enhanced hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500 hover:border-purple-500">
                     <Instagram className="h-5 w-5" />
                   </Button>
-                  <Button variant="outline" size="icon" className="hover:bg-black hover:text-white transition-colors">
+                  <Button variant="outline" size="icon" className="btn-outline-enhanced hover:bg-black hover:border-gray-800">
                     <FaTiktok className="h-5 w-5" />
                   </Button>
                 </div>

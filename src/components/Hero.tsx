@@ -30,7 +30,7 @@ const Hero = () => {
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </Button>
               
-              <Button variant="outline" className="bg-background/10 backdrop-blur-sm border-border hover:bg-background/20">
+              <Button variant="outline" className="btn-outline-enhanced">
                 <Play className="mr-2 h-5 w-5" />
                 Voir nos prestations
               </Button>
@@ -65,8 +65,10 @@ const Hero = () => {
             </div>
             
             {/* Floating elements */}
-            <div className="absolute -top-4 -right-4 w-20 h-20 bg-gradient-to-r from-primary to-purple-500 rounded-full opacity-20 animate-pulse"></div>
-            <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-gradient-to-r from-purple-500 to-primary rounded-full opacity-30 animate-pulse" style={{animationDelay: '1s'}}></div>
+            <div className="absolute -top-4 -right-4 w-20 h-20 bg-gradient-to-r from-primary to-red-600 rounded-full opacity-30 animate-pulse" 
+                 style={{boxShadow: 'var(--glow-secondary)'}}></div>
+            <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-gradient-to-r from-red-600 to-primary rounded-full opacity-40 animate-pulse" 
+                 style={{animationDelay: '1s', boxShadow: 'var(--glow-secondary)'}}></div>
           </div>
         </div>
       </div>

@@ -18,9 +18,12 @@ const Header = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-to-r from-primary to-purple-500 rounded-lg"></div>
-              <span className="text-xl font-bold gradient-text">BOVANN GROUP</span>
+            <div className="flex items-center space-x-3">
+              <div className="w-10 h-10 bg-gradient-to-r from-primary to-red-600 rounded-xl shadow-lg" 
+                   style={{boxShadow: 'var(--glow-secondary)'}}>
+                <div className="w-full h-full rounded-xl bg-gradient-to-br from-white/20 to-transparent"></div>
+              </div>
+              <span className="text-2xl font-black gradient-text tracking-tight">BOVANN GROUP</span>
             </div>
           </div>
 
@@ -31,7 +34,7 @@ const Header = () => {
                 <a
                   key={item.name}
                   href={item.href}
-                  className="text-foreground hover:text-primary transition-colors duration-300 px-3 py-2 rounded-md text-sm font-medium"
+                  className="nav-link px-4 py-2 rounded-lg text-sm font-semibold"
                 >
                   {item.name}
                 </a>
