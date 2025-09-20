@@ -35,20 +35,7 @@ const Hero = () => {
             </div>
 
             {/* Stats */}
-            <div className="grid grid-cols-3 gap-8 mt-12 pt-8 border-t border-border/30">
-              <div className="text-center">
-                <div className="text-3xl font-bold gradient-text">6+</div>
-                <div className="text-sm text-muted-foreground">Formations</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold gradient-text">3+</div>
-                <div className="text-sm text-muted-foreground">Domaines</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold gradient-text">100%</div>
-                <div className="text-sm text-muted-foreground">Qualité</div>
-              </div>
-            </div>
+            
           </div>
 
           {/* Image */}
