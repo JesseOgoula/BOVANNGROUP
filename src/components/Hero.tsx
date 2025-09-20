@@ -10,7 +10,7 @@ const Hero = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Content */}
           <div className="text-center lg:text-left my-[60px]">
-            <h1 className="text-5xl md:text-6xl mb-6 leading-tight my-[6px] px-[5px] py-[10px] font-extrabold lg:text-7xl">
+            <h1 className="text-5xl md:text-6xl mb-6 leading-tight my-[6px] px-[5px] py-[10px] font-extrabold lg:text-5xl">
               <span className="gradient-text my-[38px] py-0 font-extrabold text-7xl">Que fait</span>
               <br />
               <span className="text-foreground font-extrabold">BOVANN GROUP</span>
