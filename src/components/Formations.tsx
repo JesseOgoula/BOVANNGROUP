@@ -68,51 +68,44 @@ const Formations = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {formations.flatMap(category => 
             category.items.map((formation, index) => {
               const Icon = formation.icon;
               const categoryIndex = formations.findIndex(cat => cat.items.includes(formation));
               return (
                 <div key={`${categoryIndex}-${index}`} className="group relative">
-                  {/* Gradient background card */}
-                  <div className={`relative p-6 rounded-2xl bg-gradient-to-br ${formation.color} backdrop-blur-sm border border-white/10 hover:border-white/20 transition-all duration-500 cursor-pointer overflow-hidden`}>
-                    {/* Glass effect overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-br from-white/5 via-transparent to-black/10 rounded-2xl"></div>
-                    
-                    {/* Content */}
-                    <div className="relative z-10">
-                      {/* Icon */}
-                      <div className="w-12 h-12 rounded-xl bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-white/20 transition-all duration-300">
-                        <Icon className="h-6 w-6 text-white" />
-                      </div>
-                      
-                      {/* Category badge */}
-                      <div className="absolute top-6 right-6">
-                        <span className="text-xs font-medium text-white/60 uppercase tracking-wider bg-white/10 px-2 py-1 rounded-full backdrop-blur-sm">
-                          {formations[categoryIndex].category}
-                        </span>
-                      </div>
-                      
-                      {/* Title */}
-                      <h3 className="text-xl font-bold text-white mb-3 group-hover:text-white/90 transition-colors">
-                        {formation.title}
-                      </h3>
-                      
-                      {/* Description */}
-                      <p className="text-white/70 text-sm leading-relaxed mb-6">
-                        {formation.description}
-                      </p>
-                      
-                      {/* Button */}
-                      <button className="w-full px-4 py-2 bg-white/10 hover:bg-white/20 text-white text-sm font-medium rounded-lg border border-white/20 hover:border-white/30 transition-all duration-300 backdrop-blur-sm">
-                        En savoir plus
-                      </button>
+                  <div className="relative p-8 rounded-3xl bg-card border border-border hover:border-primary/30 transition-all duration-300 cursor-pointer h-full flex flex-col">
+                    {/* Icon */}
+                    <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
+                      <Icon className="h-7 w-7 text-primary" />
                     </div>
                     
-                    {/* Shine effect */}
-                    <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent -skew-x-12 animate-pulse"></div>
+                    {/* Category badge */}
+                    <div className="mb-4">
+                      <span className="text-xs font-medium text-muted-foreground uppercase tracking-wider bg-muted px-3 py-1 rounded-full">
+                        {formations[categoryIndex].category}
+                      </span>
+                    </div>
+                    
+                    {/* Title */}
+                    <h3 className="text-xl font-semibold text-foreground mb-3 group-hover:text-primary transition-colors">
+                      {formation.title}
+                    </h3>
+                    
+                    {/* Description */}
+                    <p className="text-muted-foreground leading-relaxed mb-6 flex-grow">
+                      {formation.description}
+                    </p>
+                    
+                    {/* Button */}
+                    <div className="pt-4 border-t border-border/50">
+                      <button className="text-primary font-medium text-sm hover:text-primary/80 transition-colors group-hover:translate-x-1 transform duration-200 flex items-center">
+                        En savoir plus
+                        <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                        </svg>
+                      </button>
                     </div>
                   </div>
                 </div>
