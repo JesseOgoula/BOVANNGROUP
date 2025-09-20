@@ -19,10 +19,7 @@ const Header = () => {
           {/* Logo */}
           <div className="flex-shrink-0">
             <div className="flex items-center space-x-3">
-              <div className="w-10 h-10 bg-gradient-to-r from-primary to-red-600 rounded-xl shadow-lg" 
-                   style={{boxShadow: 'var(--glow-secondary)'}}>
-                <div className="w-full h-full rounded-xl bg-gradient-to-br from-white/20 to-transparent"></div>
-              </div>
+              <img src="/logo.png" alt="Logo Bovann Group" className="w-8 h-8 shadow-lg object-cover" style={{boxShadow: 'var(--glow-secondary)'}} />
               <span className="text-2xl font-black gradient-text tracking-tight">BOVANN GROUP</span>
             </div>
           </div>

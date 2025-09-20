@@ -56,7 +56,26 @@ const formations = [
   }
 ];
 
+
+import { useState } from "react";
+
 const Formations = () => {
+  const [showAll, setShowAll] = useState(false);
+  const allFormations = formations.flatMap(category =>
+    category.items.map((formation, index) => {
+      const Icon = formation.icon;
+      const categoryIndex = formations.findIndex(cat => cat.items.includes(formation));
+      return {
+        key: `${categoryIndex}-${index}`,
+        Icon,
+        category: formations[categoryIndex].category,
+        title: formation.title,
+        description: formation.description
+      };
+    })
+  );
+  const displayedFormations = showAll ? allFormations : allFormations.slice(0, 3);
+
   return (
     <section id="formations" className="py-20 relative">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -68,56 +87,39 @@ const Formations = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {formations.flatMap(category => 
-            category.items.map((formation, index) => {
-              const Icon = formation.icon;
-              const categoryIndex = formations.findIndex(cat => cat.items.includes(formation));
-              return (
-                <div key={`${categoryIndex}-${index}`} className="group relative">
-                  <div className="relative p-8 rounded-3xl bg-card border border-border hover:border-primary/30 transition-all duration-300 cursor-pointer h-full flex flex-col">
-                    {/* Icon */}
-                    <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
-                      <Icon className="h-7 w-7 text-primary" />
-                    </div>
-                    
-                    {/* Category badge */}
-                    <div className="mb-4">
-                      <span className="text-xs font-medium text-muted-foreground uppercase tracking-wider bg-muted px-3 py-1 rounded-full">
-                        {formations[categoryIndex].category}
-                      </span>
-                    </div>
-                    
-                    {/* Title */}
-                    <h3 className="text-xl font-semibold text-foreground mb-3 group-hover:text-primary transition-colors">
-                      {formation.title}
-                    </h3>
-                    
-                    {/* Description */}
-                    <p className="text-muted-foreground leading-relaxed mb-6 flex-grow">
-                      {formation.description}
-                    </p>
-                    
-                    {/* Button */}
-                    <div className="pt-4 border-t border-border/50">
-                      <button className="btn-outline-enhanced">
-                        En savoir plus
-                        <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                        </svg>
-                      </button>
-                    </div>
-                  </div>
+  <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-2">
+          {displayedFormations.map(({ key, Icon, category, title, description }) => (
+            <Card
+              key={key}
+              className="card-glow transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 hover:border-primary/60 border border-border rounded-2xl bg-card"
+              style={{ maxWidth: '320px', margin: '0 auto' }}
+            >
+              <CardHeader className="flex flex-col items-center justify-center pb-2">
+                <div className="w-16 h-16 flex items-center justify-center rounded-full bg-primary/10 mb-3 shadow-sm">
+                  <Icon className="h-8 w-8 text-white" />
                 </div>
-              );
-            })
-          )}
+                <span className="inline-block text-xs font-semibold uppercase tracking-wider bg-primary/10 text-primary px-3 py-1 rounded-full mb-2">
+                  {category}
+                </span>
+                <CardTitle className="text-center text-lg font-bold text-white mb-1">
+                  {title}
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground leading-relaxed text-sm text-center">
+                  {description}
+                </p>
+              </CardContent>
+            </Card>
+          ))}
         </div>
 
         <div className="text-center mt-12">
-          <Button className="hero-button">
-            Voir toutes nos formations
-          </Button>
+          {allFormations.length > 3 && (
+            <Button className="hero-button" onClick={() => setShowAll(v => !v)}>
+              {showAll ? "Réduire" : "Voir toutes nos formations"}
+            </Button>
+          )}
         </div>
       </div>
     </section>

@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Play } from "lucide-react";
-import heroImage from "@/assets/bovann-hero.png";
+import heroImage from "@/assets/bovann.png";
 const Hero = () => {
   return <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background gradient overlay */}
@@ -12,30 +12,14 @@ const Hero = () => {
           <div className="text-center lg:text-left my-[60px]">
 
             <h1 className="text-5xl md:text-6xl mb-4 leading-tight my-[6px] px-[5px] py-[10px] text-center font-extrabold lg:text-7xl">
-              <span className="gradient-text my-[38px] font-extrabold mx-0 px-[53px] py-[2px] text-8xl block">BOVANN GROUP</span>
-              <span className="block text-foreground font-extrabold text-center text-4xl md:text-5xl mt-2">Accélérateur de talents & d'innovation</span>
+              <span className="text-red-600 font-extrabold mx-0 px-[53px] text-8xl block">BOVANN GROUP</span>
             </h1>
 
-            <p className="text-lg md:text-xl text-muted-foreground mb-6 max-w-2xl mx-auto lg:mx-0">
-              Nous accompagnons la réussite de votre projet et de votre carrière à travers&nbsp;
-              <span className="font-semibold text-primary">formations professionnelles</span>,&nbsp;
-              <span className="font-semibold text-primary">services numériques</span> et&nbsp;
-              <span className="font-semibold text-primary">solutions multimédia</span> de pointe.
+            <p className="text-lg md:text-xl text-white mb-8 max-w-2xl mx-auto text-center">
+              Nous accompagnons la réussite de votre projet et de votre carrière à travers formations professionnelles, services numériques et solutions multimédia de pointe.
             </p>
 
-            <div className="flex flex-wrap gap-3 justify-center lg:justify-start mb-8">
-              <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary font-medium text-sm">
-                <ArrowRight className="w-4 h-4" /> Communication
-              </span>
-              <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary font-medium text-sm">
-                <ArrowRight className="w-4 h-4" /> Informatique
-              </span>
-              <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary font-medium text-sm">
-                <ArrowRight className="w-4 h-4" /> Multimédia
-              </span>
-            </div>
-
-            <div className="flex flex-row gap-4 justify-center lg:justify-start">
+            <div className="flex flex-row gap-4 justify-center">
               <Button className="btn-outline-enhanced group">
                 Découvrir nos formations
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />

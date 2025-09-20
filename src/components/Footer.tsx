@@ -11,7 +11,7 @@ const Footer = () => {
           {/* Logo & Description */}
           <div className="md:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
-              <div className="w-8 h-8 bg-gradient-to-r from-primary to-purple-500 rounded-lg"></div>
+              <img src="/logo.png" alt="Bovann Group Logo" className="w-10 h-10 object-contain rounded-lg p-1 shadow" />
               <span className="text-xl font-bold gradient-text">BOVANN GROUP</span>
             </div>
             <p className="text-muted-foreground mb-6 max-w-md">
@@ -33,18 +33,6 @@ const Footer = () => {
               </div>
             </div>
 
-            {/* Social Media */}
-            <div className="flex space-x-4">
-              <a href="#" className="text-muted-foreground hover:text-blue-600 transition-colors">
-                <Facebook className="h-5 w-5" />
-              </a>
-              <a href="#" className="text-muted-foreground hover:text-pink-500 transition-colors">
-                <Instagram className="h-5 w-5" />
-              </a>
-              <a href="#" className="text-muted-foreground hover:text-white transition-colors">
-                <FaTiktok className="h-5 w-5" />
-              </a>
-            </div>
           </div>
 
           {/* Formations */}

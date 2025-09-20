@@ -1,4 +1,4 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Calendar, Users, Wrench } from "lucide-react";
 
@@ -60,49 +60,36 @@ const Prestations = () => {
           {prestations.map((prestation, index) => {
             const Icon = prestation.icon;
             return (
-              <div key={index} className="group relative h-full">
-                <div className="relative p-8 rounded-3xl bg-card border border-border hover:border-primary/30 transition-all duration-300 cursor-pointer h-full flex flex-col">
-                  {/* Icon */}
-                  <div className="w-16 h-16 mx-auto rounded-2xl bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
-                    <Icon className="h-8 w-8 text-primary" />
+              <Card
+                key={index}
+                className="card-glow transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 hover:border-primary/60 border border-border rounded-2xl bg-card"
+                style={{ maxWidth: '320px', margin: '0 auto' }}
+              >
+                <CardHeader className="flex flex-col items-center justify-center pb-2">
+                  <div className="w-16 h-16 flex items-center justify-center rounded-full bg-primary/10 mb-3 shadow-sm">
+                    <Icon className="h-8 w-8 text-white" />
                   </div>
-                  
-                  {/* Title */}
-                  <h3 className="text-xl font-semibold text-foreground mb-2 text-center group-hover:text-primary transition-colors">
-                    {prestation.title}
-                  </h3>
-                  
-                  {/* Subtitle */}
-                  <p className="text-primary font-medium text-center mb-6 text-sm">
+                  <span className="inline-block text-xs font-semibold uppercase tracking-wider bg-primary/10 text-primary px-3 py-1 rounded-full mb-2">
                     {prestation.subtitle}
-                  </p>
-                  
-                  {/* Description */}
-                  <p className="text-muted-foreground leading-relaxed mb-8 text-center flex-grow">
+                  </span>
+                  <CardTitle className="text-center text-lg font-bold text-white mb-1">
+                    {prestation.title}
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground leading-relaxed text-sm text-center mb-4">
                     {prestation.description}
                   </p>
-                  
-                  {/* Features */}
-                  <ul className="space-y-3 mb-8">
+                  <ul className="space-y-2">
                     {prestation.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-sm text-muted-foreground">
-                        <div className="w-1.5 h-1.5 bg-primary rounded-full mr-3 flex-shrink-0"></div>
+                      <li key={featureIndex} className="flex items-center text-xs text-muted-foreground">
+                        <div className="w-1.5 h-1.5 bg-primary rounded-full mr-2 flex-shrink-0"></div>
                         {feature}
                       </li>
                     ))}
                   </ul>
-                  
-                  {/* Button */}
-                  <div className="pt-6 border-t border-border/50 text-center">
-                    <button className="btn-outline-enhanced mx-auto">
-                      Découvrir le service
-                      <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                      </svg>
-                    </button>
-                  </div>
-                </div>
-              </div>
+                </CardContent>
+              </Card>
             );
           })}
         </div>
