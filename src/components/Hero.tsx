@@ -9,9 +9,9 @@ const Hero = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Content */}
-          <div className="text-center lg:text-left">
+          <div className="text-center lg:text-left my-[60px]">
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight my-[6px] px-[5px] py-[10px]">
-              <span className="gradient-text">Que fait</span>
+              <span className="gradient-text my-[38px] py-0">Que fait</span>
               <br />
               <span className="text-foreground">BOVANN GROUP</span>
               <span className="text-primary">?</span>
