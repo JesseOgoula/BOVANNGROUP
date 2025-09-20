@@ -1,10 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Play } from "lucide-react";
 import heroImage from "@/assets/hero-image.jpg";
-
 const Hero = () => {
-  return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+  return <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-br from-background via-background/95 to-purple-900/20"></div>
       
@@ -12,7 +10,7 @@ const Hero = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Content */}
           <div className="text-center lg:text-left">
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight my-[6px] px-[5px] py-[10px]">
               <span className="gradient-text">Que fait</span>
               <br />
               <span className="text-foreground">BOVANN GROUP</span>
@@ -56,19 +54,18 @@ const Hero = () => {
           {/* Image */}
           <div className="relative">
             <div className="relative rounded-2xl overflow-hidden">
-              <img
-                src={heroImage}
-                alt="BOVANN GROUP - Formation professionnelle"
-                className="w-full h-auto object-cover"
-              />
+              <img src={heroImage} alt="BOVANN GROUP - Formation professionnelle" className="w-full h-auto object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-background/50 to-transparent"></div>
             </div>
             
             {/* Floating elements */}
-            <div className="absolute -top-4 -right-4 w-20 h-20 bg-gradient-to-r from-primary to-red-600 rounded-full opacity-30 animate-pulse" 
-                 style={{boxShadow: 'var(--glow-secondary)'}}></div>
-            <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-gradient-to-r from-red-600 to-primary rounded-full opacity-40 animate-pulse" 
-                 style={{animationDelay: '1s', boxShadow: 'var(--glow-secondary)'}}></div>
+            <div className="absolute -top-4 -right-4 w-20 h-20 bg-gradient-to-r from-primary to-red-600 rounded-full opacity-30 animate-pulse" style={{
+            boxShadow: 'var(--glow-secondary)'
+          }}></div>
+            <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-gradient-to-r from-red-600 to-primary rounded-full opacity-40 animate-pulse" style={{
+            animationDelay: '1s',
+            boxShadow: 'var(--glow-secondary)'
+          }}></div>
           </div>
         </div>
       </div>
@@ -79,8 +76,6 @@ const Hero = () => {
           <div className="w-1 h-3 bg-muted-foreground rounded-full mt-2 animate-pulse"></div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Hero;
