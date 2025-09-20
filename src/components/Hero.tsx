@@ -10,20 +10,33 @@ const Hero = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Content */}
           <div className="text-center lg:text-left my-[60px]">
-            <h1 className="text-5xl md:text-6xl mb-6 leading-tight my-[6px] px-[5px] py-[10px] text-center font-extrabold lg:text-7xl">
-              <span className="gradient-text my-[38px] font-extrabold mx-0 px-[53px] py-[2px] text-8xl">Que fait</span>
-              <br />
-              <span className="text-foreground font-extrabold text-center text-6xl leading-tight">BOVANN GROUP</span>
-              <span className="text-primary text-8xl px-[13px]">?</span>
+
+            <h1 className="text-5xl md:text-6xl mb-4 leading-tight my-[6px] px-[5px] py-[10px] text-center font-extrabold lg:text-7xl">
+              <span className="gradient-text my-[38px] font-extrabold mx-0 px-[53px] py-[2px] text-8xl block">BOVANN GROUP</span>
+              <span className="block text-foreground font-extrabold text-center text-4xl md:text-5xl mt-2">Accélérateur de talents & d'innovation</span>
             </h1>
-            
-            <p className="text-xl text-muted-foreground mb-8 max-w-2xl">
-              Nous formons les talents de demain dans les domaines de la communication, 
-              l'informatique et le multimédia. Découvrez nos formations et prestations de pointe.
+
+            <p className="text-lg md:text-xl text-muted-foreground mb-6 max-w-2xl mx-auto lg:mx-0">
+              Nous accompagnons la réussite de votre projet et de votre carrière à travers&nbsp;
+              <span className="font-semibold text-primary">formations professionnelles</span>,&nbsp;
+              <span className="font-semibold text-primary">services numériques</span> et&nbsp;
+              <span className="font-semibold text-primary">solutions multimédia</span> de pointe.
             </p>
 
+            <div className="flex flex-wrap gap-3 justify-center lg:justify-start mb-8">
+              <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary font-medium text-sm">
+                <ArrowRight className="w-4 h-4" /> Communication
+              </span>
+              <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary font-medium text-sm">
+                <ArrowRight className="w-4 h-4" /> Informatique
+              </span>
+              <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary font-medium text-sm">
+                <ArrowRight className="w-4 h-4" /> Multimédia
+              </span>
+            </div>
+
             <div className="flex flex-row gap-4 justify-center lg:justify-start">
-              <Button className="hero-button group">
+              <Button className="btn-outline-enhanced group">
                 Découvrir nos formations
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </Button>

@@ -94,7 +94,7 @@ const Prestations = () => {
                   
                   {/* Button */}
                   <div className="pt-6 border-t border-border/50 text-center">
-                    <button className="text-primary font-medium text-sm hover:text-primary/80 transition-colors group-hover:translate-x-1 transform duration-200 flex items-center mx-auto">
+                    <button className="btn-outline-enhanced mx-auto">
                       Découvrir le service
                       <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />

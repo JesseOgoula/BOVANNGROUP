@@ -44,7 +44,7 @@ const Header = () => {
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            <Button className="hero-button">
+            <Button className="btn-outline-enhanced">
               Contactez-nous
             </Button>
           </div>
@@ -75,7 +75,7 @@ const Header = () => {
                   {item.name}
                 </a>
               ))}
-              <Button className="hero-button w-full mt-4">
+              <Button className="btn-outline-enhanced w-full mt-4">
                 Contactez-nous
               </Button>
             </div>

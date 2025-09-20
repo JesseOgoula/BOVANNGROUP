@@ -1,58 +1,52 @@
-# Welcome to your Lovable project
 
-## Project info
+# Bovann Vision Spark
 
-**URL**: https://lovable.dev/projects/1d89bf8c-b1ac-4489-a690-5644e0292f14
+## Présentation
 
-## How can I edit this code?
+Bovann Vision Spark est un site vitrine moderne développé avec React, TypeScript, Vite et Tailwind CSS. Il présente les services, formations et informations de contact d'une entreprise ou d'un professionnel, avec une interface soignée et responsive.
 
-There are several ways of editing your application.
+## Fonctionnalités principales
 
-**Use Lovable**
+- **Page d'accueil structurée** :
+	- En-tête de navigation
+	- Section de présentation (Hero)
+	- Section Formations
+	- Section Prestations
+	- Formulaire ou section de contact
+	- Pied de page
+- **Composants UI réutilisables** (shadcn-ui)
+- **Design responsive** avec Tailwind CSS
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/1d89bf8c-b1ac-4489-a690-5644e0292f14) and start prompting.
+## Structure du projet
 
-Changes made via Lovable will be committed automatically to this repo.
+- `src/components/` : Composants principaux et UI
+- `src/pages/` : Pages (Index, NotFound)
+- `src/assets/` : Images et ressources statiques
+- `src/hooks/` : Hooks personnalisés
+- `src/lib/` : Fonctions utilitaires
+- `public/` : Fichiers statiques accessibles publiquement
 
-**Use your preferred IDE**
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## Démarrage rapide
 
-Follow these steps:
+### Prérequis
+- Node.js & npm (ou bun)
+
+### Installation et lancement
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
 git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
 cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+npm install
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+Le serveur de développement sera accessible sur `http://localhost:5173` (par défaut).
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
 
-**Use GitHub Codespaces**
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
+## Technologies utilisées
 
 - Vite
 - TypeScript
@@ -60,14 +54,8 @@ This project is built with:
 - shadcn-ui
 - Tailwind CSS
 
-## How can I deploy this project?
+## Déploiement
 
-Simply open [Lovable](https://lovable.dev/projects/1d89bf8c-b1ac-4489-a690-5644e0292f14) and click on Share -> Publish.
+Le projet peut être déployé facilement via la plateforme [Lovable](https://lovable.dev/projects/1d89bf8c-b1ac-4489-a690-5644e0292f14) ou sur n'importe quel hébergeur statique compatible (Vercel, Netlify, etc.).
 
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+Pour un domaine personnalisé, voir la documentation Lovable : [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
