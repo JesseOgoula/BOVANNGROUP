@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Play } from "lucide-react";
-import heroImage from "@/assets/hero-image.jpg";
+import heroImage from "@/assets/bovann-hero.png";
 const Hero = () => {
   return <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background gradient overlay */}
@@ -54,7 +54,7 @@ const Hero = () => {
           {/* Image */}
           <div className="relative">
             <div className="relative rounded-2xl overflow-hidden">
-              <img src={heroImage} alt="BOVANN GROUP - Formation professionnelle" className="w-full h-auto object-cover" />
+              <img src={heroImage} alt="BOVANN GROUP - Formation professionnelle avec notre directeur" className="w-full h-auto object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-background/50 to-transparent"></div>
             </div>
             

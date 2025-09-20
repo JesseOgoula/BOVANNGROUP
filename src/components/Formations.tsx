@@ -68,37 +68,38 @@ const Formations = () => {
           </p>
         </div>
 
-        <div className="space-y-12">
-          {formations.map((category, categoryIndex) => (
-            <div key={categoryIndex}>
-              <h3 className="text-2xl font-semibold mb-6 text-primary">{category.category}</h3>
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {category.items.map((formation, index) => {
-                  const Icon = formation.icon;
-                  return (
-                    <Card key={index} className="card-glow group hover:scale-105 transition-all duration-300 cursor-pointer">
-                      <CardHeader>
-                        <div className={`w-12 h-12 rounded-lg bg-gradient-to-r ${formation.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}>
-                          <Icon className="h-6 w-6 text-white" />
-                        </div>
-                        <CardTitle className="text-lg group-hover:text-primary transition-colors">
-                          {formation.title}
-                        </CardTitle>
-                      </CardHeader>
-                      <CardContent>
-                        <CardDescription className="text-muted-foreground mb-4">
-                          {formation.description}
-                        </CardDescription>
-                        <Button variant="outline" size="sm" className="w-full btn-outline-enhanced group-hover:bg-primary group-hover:text-primary-foreground">
-                          En savoir plus
-                        </Button>
-                      </CardContent>
-                    </Card>
-                  );
-                })}
-              </div>
-            </div>
-          ))}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {formations.flatMap(category => 
+            category.items.map((formation, index) => {
+              const Icon = formation.icon;
+              const categoryIndex = formations.findIndex(cat => cat.items.includes(formation));
+              return (
+                <Card key={`${categoryIndex}-${index}`} className="card-glow group hover:scale-105 transition-all duration-300 cursor-pointer">
+                  <CardHeader>
+                    <div className="flex items-center justify-between mb-4">
+                      <div className={`w-12 h-12 rounded-lg bg-gradient-to-r ${formation.color} flex items-center justify-center group-hover:scale-110 transition-transform`}>
+                        <Icon className="h-6 w-6 text-white" />
+                      </div>
+                      <span className="text-xs font-medium text-primary/70 uppercase tracking-wider">
+                        {formations[categoryIndex].category}
+                      </span>
+                    </div>
+                    <CardTitle className="text-lg group-hover:text-primary transition-colors">
+                      {formation.title}
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <CardDescription className="text-muted-foreground mb-4">
+                      {formation.description}
+                    </CardDescription>
+                    <Button variant="outline" size="sm" className="w-full btn-outline-enhanced group-hover:bg-primary group-hover:text-primary-foreground">
+                      En savoir plus
+                    </Button>
+                  </CardContent>
+                </Card>
+              );
+            })
+          )}
         </div>
 
         <div className="text-center mt-12">
