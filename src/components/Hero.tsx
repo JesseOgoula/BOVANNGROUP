@@ -22,7 +22,7 @@ const Hero = () => {
               l'informatique et le multimédia. Découvrez nos formations et prestations de pointe.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start px-0 mx-[206px]">
               <Button className="hero-button group">
                 Découvrir nos formations
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
