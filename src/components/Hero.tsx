@@ -20,15 +20,22 @@ const Hero = () => {
             </p>
 
             <div className="flex flex-row gap-4 justify-center">
-              <Button className="btn-outline-enhanced group">
-                Découvrir nos formations
-                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-              </Button>
-              
-              <Button variant="outline" className="btn-outline-enhanced">
-                <Play className="mr-2 h-5 w-5" />
-                Voir nos prestations
-              </Button>
+              <a href="#formations">
+                <Button className="btn-outline-enhanced group" asChild>
+                  <span>
+                    Découvrir nos formations
+                    <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                  </span>
+                </Button>
+              </a>
+              <a href="#prestations">
+                <Button variant="outline" className="btn-outline-enhanced" asChild>
+                  <span>
+                    <Play className="mr-2 h-5 w-5" />
+                    Voir nos prestations
+                  </span>
+                </Button>
+              </a>
             </div>
 
             {/* Stats */}

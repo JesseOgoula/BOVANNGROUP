@@ -95,9 +95,11 @@ const Prestations = () => {
         </div>
 
         <div className="text-center mt-12">
-          <Button className="hero-button">
-            Demander un devis
-          </Button>
+          <a href="#contact">
+            <Button className="hero-button" asChild>
+              <span>Demander un devis</span>
+            </Button>
+          </a>
         </div>
       </div>
     </section>

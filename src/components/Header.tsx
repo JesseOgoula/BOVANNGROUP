@@ -18,10 +18,10 @@ const Header = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <div className="flex items-center space-x-3">
+            <a href="#home" className="flex items-center space-x-3 focus:outline-none">
               <img src="/logo.png" alt="Logo Bovann Group" className="w-8 h-8 shadow-lg object-cover" style={{boxShadow: 'var(--glow-secondary)'}} />
               <span className="text-2xl font-black gradient-text tracking-tight">BOVANN GROUP</span>
-            </div>
+            </a>
           </div>
 
           {/* Desktop Navigation */}
@@ -41,9 +41,11 @@ const Header = () => {
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            <Button className="btn-outline-enhanced">
-              Contactez-nous
-            </Button>
+            <a href="#contact">
+              <Button className="btn-outline-enhanced" asChild>
+                <span>Contactez-nous</span>
+              </Button>
+            </a>
           </div>
 
           {/* Mobile menu button */}
@@ -72,9 +74,11 @@ const Header = () => {
                   {item.name}
                 </a>
               ))}
-              <Button className="btn-outline-enhanced w-full mt-4">
-                Contactez-nous
-              </Button>
+              <a href="#contact">
+                <Button className="btn-outline-enhanced w-full mt-4" asChild>
+                  <span>Contactez-nous</span>
+                </Button>
+              </a>
             </div>
           </div>
         )}

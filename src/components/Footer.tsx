@@ -11,7 +11,9 @@ const Footer = () => {
           {/* Logo & Description */}
           <div className="md:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
-              <img src="/logo.png" alt="Bovann Group Logo" className="w-10 h-10 object-contain rounded-lg p-1 shadow" />
+              <a href="#home" className="focus:outline-none">
+                <img src="/logo.png" alt="Bovann Group Logo" className="w-10 h-10 object-contain rounded-lg p-1 shadow" />
+              </a>
               <span className="text-xl font-bold gradient-text">BOVANN GROUP</span>
             </div>
             <p className="text-muted-foreground mb-6 max-w-md">

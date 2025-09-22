@@ -98,15 +98,16 @@ const Contact = () => {
               </CardHeader>
               <CardContent>
                 <div className="flex space-x-4">
-                  <Button variant="outline" size="icon" className="btn-outline-enhanced hover:bg-blue-600 hover:border-blue-600">
-                    <Facebook className="h-5 w-5" />
-                  </Button>
-                  <Button variant="outline" size="icon" className="btn-outline-enhanced hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500 hover:border-purple-500">
-                    <Instagram className="h-5 w-5" />
-                  </Button>
-                  <Button variant="outline" size="icon" className="btn-outline-enhanced hover:bg-black hover:border-gray-800">
-                    <FaTiktok className="h-5 w-5" />
-                  </Button>
+                  <a href="https://www.facebook.com/profile.php?id=61579217937955" target="_blank" rel="noopener noreferrer">
+                    <Button variant="outline" size="icon" className="btn-outline-enhanced hover:bg-blue-600 hover:border-blue-600">
+                      <Facebook className="h-5 w-5" />
+                    </Button>
+                  </a>
+                  <a href="https://www.tiktok.com/@bovanngroup7" target="_blank" rel="noopener noreferrer">
+                    <Button variant="outline" size="icon" className="btn-outline-enhanced hover:bg-black hover:border-gray-800">
+                      <FaTiktok className="h-5 w-5" />
+                    </Button>
+                  </a>
                 </div>
                 <p className="text-sm text-muted-foreground mt-2">@BovannGroupSAS</p>
               </CardContent>
