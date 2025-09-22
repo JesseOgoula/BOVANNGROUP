@@ -56,6 +56,4 @@ Le serveur de développement sera accessible sur `http://localhost:5173` (par d�
 
 ## Déploiement
 
-Le projet peut être déployé facilement via la plateforme [Lovable](https://lovable.dev/projects/1d89bf8c-b1ac-4489-a690-5644e0292f14) ou sur n'importe quel hébergeur statique compatible (Vercel, Netlify, etc.).
-
-Pour un domaine personnalisé, voir la documentation Lovable : [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+Le projet peut être déployé facilement sur n'importe quel hébergeur statique compatible (Vercel, Netlify, etc.).
